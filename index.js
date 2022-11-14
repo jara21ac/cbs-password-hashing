@@ -47,10 +47,10 @@ const getUserByUsername = (userName) => {
   })
 }
 
-const md5sum = crypto.createHash('md5');
-const salt = 'Some salt for the hash';
 
 const hashPassword = (password) => {
+  const md5sum = crypto.createHash('md5');
+  const salt = 'Some salt for the hash';
   return md5sum.update(password + salt).digest('hex');
 }
 
