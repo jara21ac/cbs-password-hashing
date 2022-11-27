@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var socket = io.connect('http://localhost:3000');
-    var username = prompt("What is your name?");
+    var username = req.session.username;
     socket.emit('join', username);
     
   
